@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main -Entry point
+ * main - Entry point
  *
- * code prints out -with proper grammer, but the outcome is a piece of art,
+ * code prints out - with proper grammer, but the outcome is a piece of art,
  *
  * Return:Always 0 on Success
  */
