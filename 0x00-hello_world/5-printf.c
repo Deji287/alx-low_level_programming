@@ -4,7 +4,7 @@
  *
  * code prints out - with proper grammer, but the outcome is a piece of art,
  *
- * Return:Always 0 on Success
+ * Return: Always 0 on Success
  */
 int main(void)
 {
