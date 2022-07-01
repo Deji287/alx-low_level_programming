@@ -4,9 +4,9 @@
 /**
  * main - Entry point
  *
- * To store and display random numbers
+ * Store and display random numbers
  *
- * return: 0 on success
+ * Return: 0 on success
  */
 int main(void)
 {
