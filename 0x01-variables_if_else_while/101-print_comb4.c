@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main -Entry point
+ * main - Entry point
  *
  * Prints all possible combination of three digits.
  *
@@ -30,7 +30,7 @@ int main(void)
 					putchar(' ');
 				}
 			}
-	putchar('\');
+	putchar('\n');
 	return (0);
 }
 
