@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
 *print_alphabet_x10 - prints the english alphabet from a-z 10 times.
 *
