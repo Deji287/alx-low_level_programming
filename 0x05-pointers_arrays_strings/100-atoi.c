@@ -15,7 +15,7 @@ int _atoi(char *s)
 	{
 		if (*(s + i) == '-')
 			neg *= -1;
-			i++;
+		i++;
 	}
 	temp = i;
 	while ((*(s + temp) >= '0') && (*(s + temp) <= '9'))
