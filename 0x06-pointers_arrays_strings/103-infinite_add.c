@@ -19,7 +19,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		;
 	if (n1Size > size_r || n2Size > size_r)
 		return (0);
-		m = 0;
+	m = 0;
 	for (n1Size -= 1, n2Size -= 1, k = 0; k < size_r - 1; n1Size--, n2Size--, k++)
 	{
 		n = m;
