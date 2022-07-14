@@ -36,7 +36,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	r[k] = '\0';
 	if (n1Size >= 0 || n2Size >= 0 || m)
-	return (0);
+		return (0);
 	for (k -= 1, l = 0; l < k; k--, l++)
 	{
 		m = r[k];
