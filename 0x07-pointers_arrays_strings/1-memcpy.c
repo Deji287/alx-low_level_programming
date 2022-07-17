@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
 * _memcpy - copies bytes from memory area src
 * @dest: destination of memory copy
