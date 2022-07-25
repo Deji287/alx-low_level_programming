@@ -61,7 +61,7 @@ char **strtow(char *str)
 			for (; *str != ' ' && *str != '\0'; str++)
 				length++;
 			words[b] = (char *) malloc((length + 1) * sizeof(char));
-			if (words[b] == 0;
+			if (words[b] == 0)
 			{
 			free_everything(words, b);
 			return (NULL);
