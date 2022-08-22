@@ -1,34 +1,47 @@
 #include "main.h"
 /**
- * create_file - creates a file and fills it with text
- * @filename: name of the file to create
- * @text_content: text to write in the file
+ * read_textfile - reads a text file and prints it to the standard output
+ * @filename: name of the file to be read
+ * @letters: number of letters to read and print
  *
- * Return: 1 on success, -1 on failure
+ * Return: the number of letters printed, or 0 if it failed
  */
-int create_file(const char *filename, char *text_content)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, str_len;
-	ssize_t len_write;
+	int fd;
+	ssize_t len_read, len_write;
+	char *buffer;
 
 	if (!filename)
-		return (-1);
+		return (0);
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-		return (-1);
+		return (0);
 
-	if (text_content)
+	buffer = malloc(sizeof(char) * letters);
+	if (!buffer)
 	{
-		/* get string length  */
-		for (str_len = 0 ; text_content[str_len]; str_len++)
-			;
-		/* write text to file */
-		len_write = write(fd, text_content, str_len);
-		if (len_write != str_len)
-			return (-1);
+		close(fd);
+		return (0);
 	}
-	close(fd);
 
-	return (1);
+	len_read = read(fd, buffer, letters);
+	close(fd);
+	if (len_read == -1)
+	{
+		free(buffer);
+		return (0);
+	}
+	buffer[len_read] = '\0';
+
+	len_write = write(STDOUT_FILENO, buffer, len_read);
+	if (len_write < 0)
+	{
+		free(buffer);
+		return (0);
+	}
+
+	free(buffer);
+	return (len_write);
 }
