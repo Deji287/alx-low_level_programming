@@ -1,5 +1,3 @@
-nes (61 sloc)  1.4 KB
-
 #include "main.h"
 /**
  * check_argc - checks for the correct number of arguments
