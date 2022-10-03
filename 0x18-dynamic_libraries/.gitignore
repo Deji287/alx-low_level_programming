@@ -1,0 +1,6 @@
+*.c
+*.o
+*test.exe
+*test.o
+*main.c
+*main.o
